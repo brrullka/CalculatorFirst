@@ -3,7 +3,7 @@
 
 .calculator-main{ 
     margin:10px; 
-    width: 38%;
+    width: 100%;
     height: 95vh;
     display: flex;
     flex-wrap:wrap;
@@ -11,10 +11,13 @@
 }
 
 #pole-result{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     width: 100%;
     height: 13vh;
     text-align: right;
-    font-size: 40px;
+    font-size: 40px;              
 }
 
 .buttons{
@@ -33,7 +36,6 @@
     border-radius:50%;
     font-size: 60px;
 
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,59 +50,57 @@ transform: scale(1.1);
 opacity: 0.8;
 }
 
+
+/* начало */
 @media(min-width: 0px){
-    .calculator-main{
-        width: 95%;
-    }
-    .button{
-        font-size: 34px;
-    }
+    .calculator-main{ width: 88%;}
+
+    .button{font-size: 35px;}
+    
+    #pole-result{ height:30vh;
+        font-size: 70px;}
+
+    .buttons{height:65vh;}
 }
 
 
-/* 576px и больше */
-@media (min-width: 576px) {
-    .calculator-main {
-        width: 95%;
-    }
-
-    .button {
-        font-size: 36px;
-    }
+/* 530px и больше */
+@media (min-width: 530px) {
+    .calculator-main { width: 80%;}
+    .button{font-size: 36px;} 
 }
 
+/*  600 пикс и больше */
+@media(min-width: 600px){
+    .calculator-main{ width:72%;}
+    .button{font-size: 38px;}
+}
 
 /* 700px и больше */
 @media (min-width: 700px) {
-    .calculator-main {
-        width: 82%;
-    }
-
-    .button {
-        font-size: 38px;
-    }
+    .calculator-main {width: 65%;}
 }
-
 
 /* 800px и больше */
 @media (min-width: 800px) {
-    .calculator-main {
-        width: 73%;
-    }
+    .calculator-main { width: 58%;}
 
-    .button {
-        font-size: 42px;
-    }
+    
 }
-
 
 /* 900px и больше */
 @media (min-width: 900px) {
-    .calculator-main {
-        width: 38%;
-    }
+    .calculator-main {width: 50%;}
+}
 
-    .button {
-        font-size: 47px;
-    }
+@media(min-width: 1000px){
+    .calculator-main{width: 48%;}
+}
+
+@media(min-width: 1150px){
+    .calculator-main{width:40%;}
+}
+
+@media(min-width: 1300px){
+    .calculator-main{width: 32%;}
 }
