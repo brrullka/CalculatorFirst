@@ -19,7 +19,7 @@ buttons.forEach(function(button) {
             button.textContent === "*" ||
             button.textContent === "/"
         ) {
-            firstNumber = Number(currentNumber);
+            firstNumber = Number(currentNumber.replace("," , "."));
             operator = button.textContent;
 
             currentNumber = "";
@@ -30,7 +30,7 @@ buttons.forEach(function(button) {
 
         else if (button.textContent === "=") {
 
-            secondNumber = Number(currentNumber);
+            secondNumber = Number(currentNumber.replace("," , "."));
 
             if (operator === "+") {
                 result.textContent = firstNumber + secondNumber;
@@ -66,16 +66,27 @@ buttons.forEach(function(button) {
        }
 
         else if (button.textContent === "C") {
-
             firstNumber = null;
             operator = null;
             secondNumber = null;
             currentNumber = "";
-
             result.textContent = "";
         }
 
-        
+        else if (button.textContent === ","){
+        currentNumber = currentNumber + button.textContent;
+        result.textContent = currentNumber;
+
+        if(!currentNumber.includes(",")){
+        currentNumber = currentNumber + ",";
+        result.textContent = currentNumber;
+        }
+ }
+        else if(button.textContent === "%"){
+             currentNumber = currentNumber / 100;
+             result.textContent = currentNumber;
+        }
+
         else {
 
             currentNumber = currentNumber + button.textContent;
@@ -84,6 +95,8 @@ buttons.forEach(function(button) {
                 result.textContent =
                     `${firstNumber} ${operator} ${currentNumber}`;
             }
+
+
 
             else {
                 result.textContent = currentNumber;
