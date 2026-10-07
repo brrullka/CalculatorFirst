@@ -48,11 +48,17 @@ transform: scale(1.1);
 opacity: 0.8;
 }
 
+@media(min-width: 0px){
+    .calculator-main{
+        width: 95%;
+    }
+}
+
 
 /* 576px и больше */
 @media (min-width: 576px) {
     .calculator-main {
-        width: 85%;
+        width: 95%;
     }
 
     .button {
