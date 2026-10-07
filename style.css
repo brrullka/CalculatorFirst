@@ -52,6 +52,9 @@ opacity: 0.8;
     .calculator-main{
         width: 95%;
     }
+    .button{
+        font-size: 34px;
+    }
 }
 
 
