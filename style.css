@@ -3,7 +3,7 @@
 
 .calculator-main{ 
     margin:10px; 
-    width: 40%;
+    width: 38%;
     height: 95vh;
     display: flex;
     flex-wrap:wrap;
@@ -97,7 +97,7 @@ opacity: 0.8;
 /* 900px и больше */
 @media (min-width: 900px) {
     .calculator-main {
-        width: 50%;
+        width: 38%;
     }
 
     .button {
